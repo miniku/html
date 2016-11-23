@@ -1,0 +1,48 @@
+body{
+  background-color: #45cb85;
+}
+h1 {
+  color: #153131;
+}
+h2 {
+  background-color: ##ee3e80;
+}
+p {
+  color: #238481;
+}
+
+#p01 {
+    color: blue;
+}
+
+header h1{
+}
+* {
+  font-family: Arial, Verdana, Sans-serif;}
+h1 {
+  color: DarkCyan;
+  font-family: "Courier New", monospace;}
+
+p#intro {
+  font-size: 100%;}
+p {
+  font-size: 100%;}
+nav ul{
+  margin: 0;
+  display:inline;
+}
+nav ul li{
+
+  background: #238481;
+  color: ;
+display:inline-block;
+list-style-type: none;
+padding: 5px 15px;
+}
+nav ul li a{
+  color: white;
+}
+caption {
+    display: table-caption;
+    text-align: center;
+}
