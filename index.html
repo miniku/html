@@ -14,10 +14,10 @@
     <nav>
       <h1><strong>Welcome to Nate's website! </strong></h>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bootstrap/bootstrap.html">Bootstrap</a></li>
+        <li><a href="test/test.html">Test</a></li>
+        <li><a href="#">jQuery</a></li>
         <li><a href="slideshow/slideshow.html">Links</a></li>
       </ul>
     </nav>
@@ -32,7 +32,11 @@
   <br>
   <br>
 
+  <button type="button"
+  onclick="document.getElementById('demo').innerHTML = Date()">
+  Click me to display Date and Time.</button>
 
+  <p id="demo"></p>
 <form>
   <p> Username:
     <input type="text" id="username" size="15"
@@ -71,7 +75,7 @@
 
 <form action="http://www.example.com/comments.php">
     <p><em>What did you think of this website?</em></p>
-  <textarea name="comments" cols="20" rows="4">Comments here...</textarea>
+  <textarea name="comments" cols="20" rows="4"></textarea>
 </form>
   </p>
 </form>
@@ -116,7 +120,8 @@
 </body>
 <footer>Enjoyed ourselves, did we?
 </footer>
-
+<script> src="js/jquery.min.js"></script>
+<script> src="js/bootstrap.min.js"></script>
 <script>
   document.getElementById("username").value;
   alert(u);

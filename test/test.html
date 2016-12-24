@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<title>
+  Test
+</title>
+<link href="../site.css" rel="stylesheet" href="styles/style.css" />
+</head>
+<header>
+    <nav>
+      <h1><strong>Test</strong></h>
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../bootstrap/bootstrap.html">Bootstrap</a></li>
+        <li><a href="test.html">Test</a></li>
+        <li><a href="https://www.youtube.com/watch?v=-98o_QOrJho">jQuery</a></li>
+        <li><a href="../slideshow/slideshow.html">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+        <!-- responsive vs non responsive -->
+        <img src="../slideshow/Images/2.jpg" class="img-responsive">
+
+    <a href="https://www.youtube.com/watch?v=-98o_QOrJho">The Kooks</a>
+
+        <!-- embed responsive videos -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=-98o_QOrJho"></iframe>
+        </div>
+
+    </div>
+    <div class="container">
+      <h1>Test</h1>
+    </div>
+  <br>
+  <span onmouseover="this.style.color='red'">Mouse over me!</span>
+<hr>
+<h2><a href="../slideshow/slideshow.html"><p id="p01">
+  You have located the cynderblock chasm to the happiness bicycle of death.</p></a>
+</h2>
+<br>
+<p id="first">This is a paragraph</p>
+<p id="second">This is a paragraph</p>
+
+<form name"formex">
+    <input type="checkbox" name="firstpara" onClick="showPara();" />First Paragraph<br />
+    <input type="checkbox" name="secondpara" onClick="showPara();" />Second Paragraph<br />
+
+  <div class="container-fluid">
+    <h2>3 column layout</h2>
+    <div class="row">
+      <div class="col-md-4" style="background-color: #FF9999">Left</div>
+      <div class="col-md-4" style="background-color: #99CCFF">Middle</div>
+      <div class="col-md-4" style="background-color: #00CC99">Right</div>
+  </div>
+<p id="myPar">what is HTML?</p>
+<div id="myDiv">HTML is the standard markup language for creating Web pages.
+   HTML stands for Hyper Text Markup Language.</div>
+
+<p>
+<button type="button" onclick="myFunction()">Try it</button>
+</p>
+<p>Hey
+</p>
+
+<script>
+function myFunction() {
+    document.getElementById("myPar").innerHTML = "Fun stuff";
+    document.getElementById("myDiv").innerHTML = "Better luck next time";
+}
+function showPara()
+{
+  document.getElementById("first").style.visitbility=(document.formex.firstpara.checked) ? "visible" : "hidden";
+  document.getElementById("second").style.visitbility=(document.formex.secondpara.checked) ? "visible" : "hidden";
+  return true;
+}
+<noscript>
+  <h3>This site requires JavaScript</h3>
+</noscript>
+</script>
+</body>
+</html>
