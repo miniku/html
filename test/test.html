@@ -31,25 +31,71 @@
   <div class="container">
         <!-- responsive vs non responsive -->
         <img src="../slideshow/Images/2.jpg" class="img-responsive">
-
-        <!-- embed responsive videos -->
-      <div class="container">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=-98o_QOrJho"></iframe>
-        </div>
-
-    </div>
+  </div>
     <div class="container">
       <h1>Test</h1>
     </div>
-  <br>
-  <span onmouseover="this.style.color='red'">Mouse over me!</span>
+<br>
+var elForm, elSelectPackage, elPackageHint, elTerms;
+elForm = document.getElementById('formSignup');
+elSelectPackage = document.getElementById('package');
+elPackageHint = document.getElementById('packageHint');
+elTerms = document.getElementById('terms');
+elTermsHint = document.getElementById('termsHint');
+
+function packageHint() {
+  var package = this.options[this.selectedIndex].value;
+  if (package == 'monthly') {
+    elPackageHint.innerHTML = 'Save $10';
+  } else {
+    elPackageHint.innerHTML = 'Wise choice!';
+  }
+}
+function checkTerms(event) {
+  if (!elTerms.checked) {
+    elTermsHint.innerHTML = 'You must agree to the terms.';
+    event.preventDefault();
+  }
+}
+elForm.addEventListener('submit', checkTerms, false);
+elSelectPackage.addEventListener('change', packageHint, false);
+<br>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#D94A38;width:120px;height:120px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+}
+</script>
+<br>
+<span onmouseover="this.style.color='red'">Mouse over me!</span>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:80px;height:60px;padding:60px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+}
+</script>
 <hr>
 <h2><a href="../slideshow/slideshow.html"><p id="p01">
   You have located the cynderblock chasm to the happiness bicycle of death.</p></a>
 </h2>
 <br>
-<p id="first">This is a paragraph</p>
+<p id="first">This is a paragraph that should work but is broken.</p>
 <p id="second">This is a paragraph</p>
 <br>
 
@@ -79,8 +125,8 @@ function myFunction() {
 }
 function showPara()
 {
-  document.getElementById("first").style.visitbility=(document.formex.firstpara.checked) ? "visible" : "hidden";
-  document.getElementById("second").style.visitbility=(document.formex.secondpara.checked) ? "visible" : "hidden";
+  document.getElementById("first").style.visitbility = (document.formex.firstpara.checked) ? "visible" : "hidden";
+  document.getElementById("second").style.visitbility = (document.formex.secondpara.checked) ? "visible" : "hidden";
   return true;
 }
 <noscript>

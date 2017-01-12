@@ -3,6 +3,7 @@
 <head>
     <title>Bootstrap</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="sidebar.css">
@@ -34,15 +35,19 @@
                   <li><a href="#">jQuery</a></li>
                   <li><a href="../slideshow/slideshow.html">Links</a></li>
                 </ul>
+
                 <!-- drop down menu -->
                    <li class="dropdown">
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile <span class="caret"></span></a>
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                         My Profile <span class="caret"></span></a>
                        <ul class="dropdown-menu">
                            <li><a href="#">Friends</a></li>
                            <li><a href="#">Photos</a></li>
                            <li><a href="#">Settings</a></li>
                        </ul>
                    </li>
+
+
                    <!--right align -->
                    <ul class="nav navbar-nav navbar-right">
                       <li><a href="#">Logout</a></li>
@@ -85,6 +90,24 @@
 <br>
 <br>
 <br>
+<div class="btn-group btn-group-justified">
+ <a href="#" class="btn btn-primary">Bootstrap</a>
+ <a href="#" class="btn btn-primary">Is</a>
+ <a href="#" class="btn btn-primary">Cool</a>
+</div>
+<div class="btn-group">
+      <button type="button" class="btn btn-primary">Info</button>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Tablet</a></li>
+        <li><a href="#">Smartphone</a></li>
+      </ul>
+    </div>
+<button type="button" class="btn btn-danger">Danger</button>
+<br>
+<br>
     <div class="container">
       <h2>Contextual Colors</h2>
       <p class="text-muted">This text is muted.</p>
@@ -125,6 +148,15 @@
         </tbody>
       </table>
     </div>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

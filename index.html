@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
 </head>
 
 <link href="site.css" rel="stylesheet" href="styles/style.css" />
 </head>
-<body>
+<body id="body">
 
   <header>
     <nav>
@@ -20,7 +21,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="bootstrap/bootstrap.html">Bootstrap</a></li>
         <li><a href="test/test.html">Test</a></li>
-        <li><a href="#">jQuery</a></li>
+        <li><a href="js/js.js">JavaScript</a></li>
         <li><a href="slideshow/slideshow.html">Links</a></li>
       </ul>
     </nav>
@@ -48,7 +49,6 @@
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                       <h3 class="modal-title">Log In</h3>
                   </div>
-
                   <!-- body (form) -->
                   <div class="modal-body">
                       <form role="form">
@@ -60,7 +60,6 @@
                           </div>
                       </form>
                   </div>
-
                   <!-- button -->
                   <div class="modal-footer">
                       <button class="btn btn-primary btn-block">Submit</button>
@@ -74,8 +73,68 @@
   <a href="slideshow/slideshow.html"><strong><h1>Visit my slideshow </h1></strong></a>
   <br>
   <br>
-  <br>
+  <br />
+<div class="container">
+  <form method="post" action="something.php" name="myForm">
+    <div>
+      <label>First Name</label>
+      <label type="text" name="firstName" id="firstName" />
+    </div>
+    <br />
+    <div>
+      <label>Last Name</label>
+      <input type="text" name="lastName" id="lastName" />
+    </div>
+    <br />
+    <div>
+      <label>Background</label>
+      <select name="background" id="background"
+      onchange="changeBackground(this)">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+    </div>
+    <br />
+    <input type="submit" value="Submit" />
+  </form>
+</div>
 
+<script>
+function validateForm(){
+  var firstName = document.forms["myForm"]["firstName"].value;
+  if(firstName == null || firstName == ""){
+    alert("First name is required");
+    return false;
+  }
+  if(firstName.length < 3){
+    alert("First name must be at least 3 chars");
+    return false;
+}
+ function changeBackground(x){
+   console.log(x.value);
+   var body = document.getElementById("body");
+   body.style.backgroundColor = x.value;
+ }
+ </script>
+<form method="post" action="http://example.org/register">
+  <label for="username">Create a username: </label>
+  <input type="text" id="username" onblur="checkUsername()" />
+  <div id="feedback"></div>
+
+  <label for="password">Create a password: </label>
+  <input type="password" id="password" />
+
+  <input type="submit" value="Log in" />
+</form>
+<br>
+<br>
+function setup() {
+  var textInput;
+  textInput = document.getElementById('username');
+  textInput.focus();
+}
+window.addEventListener('load', setup, false);
     <p>
       <a href="mailto:John@example.org">Email Example</a>
     </p>
@@ -111,7 +170,8 @@
       value="subscribe" />
   </form>
 
-
+  <div class="alert alert-success alert-dismissable">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 
 </table>
 <table>
@@ -151,5 +211,5 @@
   document.getElementById("username").value;
   alert(u);
 </script>
-
+<script type="text/javascript" src="js/event-attributes.js"></script>
 </html>
