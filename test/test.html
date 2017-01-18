@@ -15,19 +15,21 @@
 <link href="../site.css" rel="stylesheet" href="styles/style.css" />
 </head>
 <header>
+
     <nav>
-      <h1><strong>Test</strong></h>
       <ul class="nav navbar-nav">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../bootstrap/bootstrap.html">Bootstrap</a></li>
         <li><a href="test.html">Test</a></li>
-        <li><a href="https://www.youtube.com/watch?v=-98o_QOrJho">The Kooks</a></li>
+        <li><a href="test2.html">Test 2</a></li>
+        <li><a href="/jquery/jquery.js">jQuery</a></li>
         <li><a href="../slideshow/slideshow.html">Links</a></li>
       </ul>
     </nav>
+
   </header>
 <br>
-
+<h1><strong>Test</strong></h1>
   <div class="container">
         <!-- responsive vs non responsive -->
         <img src="../slideshow/Images/2.jpg" class="img-responsive">
@@ -35,6 +37,8 @@
     <div class="container">
       <h1>Test</h1>
     </div>
+
+    <a href="https://www.youtube.com/watch?v=-98o_QOrJho">The Kooks</a>
 <br>
 var elForm, elSelectPackage, elPackageHint, elTerms;
 elForm = document.getElementById('formSignup');
@@ -59,6 +63,74 @@ function checkTerms(event) {
 }
 elForm.addEventListener('submit', checkTerms, false);
 elSelectPackage.addEventListener('change', packageHint, false);
+<br>
+<p>
+  <a href="mailto:John@example.org">Email Example</a>
+</p>
+<form action="http://www.example.com/profile.php">
+  <p><em>What device do you listen to music on?</em></p>
+  <select name="devices">
+    <option value="ipod">iPod</option>
+    <option value="Computer">Computer</option>
+    <option value="Radio">Radio</option>
+  </select>
+</form>
+<form action="http://www.example.com/profile.php">
+<p><em>Please select your favorite music:</em></p>
+<input type="checkbox" name="genre"
+  value="Rock" /> Rock
+<input type="checkbox" name="genre"
+  value="Pop" /> Pop
+<input type="checkbox" name="genre"
+  value="Techno" /> Techno
+</p>
+</form>
+
+<form action="http://www.example.com/comments.php">
+<p><em>What did you think of this website?</em></p>
+<textarea name="comments" cols="20" rows="4"></textarea>
+</form>
+</p>
+</form>
+<form action="http://www.example.com/subscribe.php">
+<p><em>Subscribe to our email list:</em></p>
+<input type="text" name="email" />
+<input type="submit" name="subscribe"
+  value="subscribe" />
+</form>
+
+<div class="alert alert-success alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+</table>
+<table>
+<tr>
+<th></th>
+<th scope="col">Happy</th>
+<th scope="col">Sad</th>
+</tr>
+<tr>
+<th scope="row">Positive</th>
+<td>100</td>
+<td>200</td>
+</tr>
+<tr>
+<th scope="row">Negative</th>
+<td>300</td>
+<td>400</td>
+</tr>
+</table>
+<ul> <li>item 1</li>
+<li> item 2</li>
+<li> item 3</li>
+
+<div class="col">col1</div>
+<div class="col">col2</div>
+<div class="col">col3</div>
+</div>
+<span>
+</span>
+</ul>
 <br>
 <div onmouseover="mOver(this)" onmouseout="mOut(this)"
 style="background-color:#D94A38;width:120px;height:120px;padding:40px;">
@@ -129,9 +201,73 @@ function showPara()
   document.getElementById("second").style.visitbility = (document.formex.secondpara.checked) ? "visible" : "hidden";
   return true;
 }
+<div class="container">
+  <div class="jumbotron">
+    <h1>Playing with jquery</h1>
+    <button id="btn1">#btn1</button>
+    <button id="btn2">#btn2</button>
+    <button id="btn3">#btn3</button>
+    <button id="btn4">#btn4</button>
+  </div>
+
+  <div class="row">
+    <div class="cl-xs-3">
+      <div id="panel1" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel1
+        </div>
+        <div class="panel-body">content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel2" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel2
+        </div>
+        <div class="panel-body">content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel3" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel3
+        </div>
+        <div class="panel-body">content
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-3">
+      <div id="panel4" class="panel panel-primary">
+        <div class="panel-heading">
+          #panel4
+        </div>
+        <div class="panel-body">content
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script> src="jquery-3.1.1.min.map"></script>
+<script> src="js/jquery.min.js"></script>
+<script>
+  $(function() {
+    $("#panel1").hide(300).show(300);
+  });
 <noscript>
   <h3>This site requires JavaScript</h3>
 </noscript>
 </script>
+
+<script> src="js/bootstrap.min.js"></script>
+
+<script
+        src="//code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 </body>
 </html>

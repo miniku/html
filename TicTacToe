@@ -1,0 +1,129 @@
+<table border="1">
+<tr>
+  <td colspan="3">
+    <div id="msg">
+      Tic Tac Toe
+    </div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <span id="r1c1">R1C1</span>
+  </td>
+  <td>
+    <span id="r1c2">R1C2</span>
+  </td>
+  <td>
+    <span id="r1c3">R1C3</span>
+  </td>
+</tr>
+<tr>
+  <td>
+    <span id="r2c1">R2C1</span>
+  </td>
+  <td>
+    <span id="r2c2">R2C2</span>
+  </td>
+  <td>
+    <span id="r2c3">R2C3</span>
+  </td>
+</tr>
+<tr>
+  <td>
+    <span id="r3c1">R3C1</span>
+  </td>
+  <td>
+    <span id="r3c2">R3C2</span>
+  </td>
+  <td>
+    <span id="r3c3">R3C3</span>
+  </td>
+</tr>
+<tr>
+  <td colspan="3">
+    <div id="reset">
+      Click here to reset
+    </div>
+  </td>
+</tr>
+</table>
+
+
+var player = 0;
+var color = [ "red", "blue" ];
+var unpicked_color = 'white';
+var table = [];
+var winning_triples = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+var idToIndexMap = {r1c1:0,r1c2:1,r1c3:2,r2c1:3,r2c2:4,r2c3:5,r3c1:6,r3c2:7,r3c3:8};
+
+var idToIndex = function(id) {
+	return idToIndexMap[id];
+};
+
+var getPlayerColor = function (p) {
+	return color[p];
+};
+
+var setBanner = function (str, color) {
+  $("#msg").html(str);
+  $("#msg").css('background-color', color);
+};
+
+var showWhosTurn = function () {
+	setBanner('Player ' + player + "'s turn", getPlayerColor(player));
+};
+
+var switchPlayers = function () {
+	if(player == 0) {
+   	player = 1;
+  }else{
+  	player = 0;
+  }
+  showWhosTurn();
+};
+
+var clearBoard = function () {
+	player = 0;
+	table = [];
+	$("span").css('background-color', 'white');
+  setBanner('&nbsp;', 'gray');
+};
+
+var victory = function () {
+	setBanner('Player ' + player + ' (' + getPlayerColor(player) + ') wins!', getPlayerColor(player));
+};
+
+var detectWinner = function() {
+	for(var i = 0; i < winning_triples.length; i++) {
+  	var three = winning_triples[i];
+    var v1 = table[three[0]];
+    var v2 = table[three[1]];
+    var v3 = table[three[2]];
+    if(v1 == unpicked_color || v1 == null) {
+   		continue;
+    } else if(v1 == v2 && v1 == v3) {
+      victory();
+      return true;
+    }
+  }
+	return false;
+};
+
+var markBox = function(box_id) {
+	$("#" + box_id).css('background-color', getPlayerColor(player));
+  var i = idToIndex(box_id);
+  table[i] = getPlayerColor(player);
+};
+
+var playTurn = function (e) {
+	console.log('Player ' + player + ' clicked ' + e.currentTarget.id
+  						+ ', color: ' + getPlayerColor(player));
+  markBox(e.currentTarget.id);
+  if(!detectWinner()) {
+  	switchPlayers();
+  }
+};
+
+clearBoard();
+$("span").on('click', playTurn);
+$('#reset').on('click', clearBoard);
